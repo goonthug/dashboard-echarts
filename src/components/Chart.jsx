@@ -26,6 +26,7 @@ const Chart = ({ type, data, theme }) => {
         type: type,
         barWidth: '20%',
         itemStyle: {
+          // Цвета можно вынести в константу
           color: params => ['#10b981', '#ef4444', '#8b5cf6', '#f97316'][params.dataIndex % 4],
           borderRadius: [5, 5, 0, 0]
         },
@@ -38,6 +39,7 @@ const Chart = ({ type, data, theme }) => {
   };
 
   useEffect(() => {
+    // Сделано хорошо.
     const handleResize = () => {
       if (chartRef.current) {
         chartRef.current.getEchartsInstance().resize();
